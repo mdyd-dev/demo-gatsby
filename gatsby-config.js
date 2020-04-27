@@ -1,4 +1,5 @@
 module.exports = {
+  assetPrefix: "assets",
   siteMetadata: {
     title: `Gatsby Starter Blog`,
     author: {
@@ -12,6 +13,12 @@ module.exports = {
     },
   },
   plugins: [
+    {
+      resolve: "gatsby-plugin-no-sourcemaps",
+    },
+    {
+      resolve: "gatsby-plugin-asset-path",
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -42,7 +49,6 @@ module.exports = {
               wrapperStyle: `margin-bottom: 1.0725rem`,
             },
           },
-          `gatsby-remark-prismjs`,
           `gatsby-remark-copy-linked-files`,
           `gatsby-remark-smartypants`,
         ],
@@ -50,13 +56,6 @@ module.exports = {
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
-    {
-      resolve: `gatsby-plugin-google-analytics`,
-      options: {
-        //trackingId: `ADD YOUR TRACKING ID HERE`,
-      },
-    },
-    `gatsby-plugin-feed`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {

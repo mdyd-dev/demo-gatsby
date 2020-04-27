@@ -1,3 +1,7 @@
+.pos
+tmp/
+app/
+
 # Logs
 logs
 *.log
